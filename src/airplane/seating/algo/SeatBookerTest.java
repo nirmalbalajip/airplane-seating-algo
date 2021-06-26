@@ -38,7 +38,7 @@ public class SeatBookerTest {
 
     @Test
     public void testSinglePassengerMultiSections() throws InvocationTargetException, IllegalAccessException {
-        InputData inputData = new InputData(new int[]{2, 3, 3, 4, 3, 2, 4, 3}, 4, 30);
+        InputData inputData = new InputData(new int[]{3, 2, 4, 3, 2, 3, 3, 4}, 4, 30);
         String[][] seatPlan = (String[][]) this.computeSeatingPlan.invoke(null, inputData);
         assertEquals(4, seatPlan.length);
         assertEquals(12, seatPlan[0].length);

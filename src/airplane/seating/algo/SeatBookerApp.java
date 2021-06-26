@@ -42,13 +42,13 @@ public class SeatBookerApp {
         int[] sectionsData = inputData.getSectionsData();
         int noOfSections = inputData.getNoOfSections();
         int passengerCount = inputData.getPassengerCount();
-        int windowSeats = sectionsData[0] + sectionsData[sectionsData.length - 2]; // number of rows in leftmost section + number of rows in rightmost section
+        int windowSeats = sectionsData[1] + sectionsData[sectionsData.length - 1]; // number of rows in leftmost section + number of rows in rightmost section
         int endSeats = 0;
         int totalSeats = 0;
         int maxRowCount = sectionsData[0];
         int sumOfColumnCount = 0;
         for (int i = 0; i < noOfSections; i++) {
-            int rowCount = sectionsData[2 * i], columnCount = sectionsData[2 * i + 1];
+            int rowCount = sectionsData[2 * i + 1], columnCount = sectionsData[2 * i];
             totalSeats += rowCount * columnCount;
             if (columnCount > 0) {
                 endSeats = endSeats + 2 * rowCount;
@@ -74,8 +74,8 @@ public class SeatBookerApp {
 
             for (int column = 0; column < sumOfColumnCount; column++) {
                 currentColumnInCurrentSection++;
-                int rowCountOfCurrentSection = sectionsData[2 * currentSection];
-                int columnCountOfCurrentSection = sectionsData[2 * currentSection + 1];
+                int rowCountOfCurrentSection = sectionsData[2 * currentSection + 1];
+                int columnCountOfCurrentSection = sectionsData[2 * currentSection];
 
                 if (rowCountOfCurrentSection > row) {
                     int passengerNumber = 0;
