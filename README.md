@@ -10,5 +10,9 @@ seats	(any	order	in	center	seats)
 
 Sample Output:
 
+Legends: A - Aisle; W - Window; M - Middle
+
+![image](https://user-images.githubusercontent.com/26460909/123512122-54768980-d6a3-11eb-89c3-b0193e9bee82.png)
+
 
 To execute test cases, please add junit to the classpath
